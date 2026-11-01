@@ -1,0 +1,20 @@
+{
+  "name": "wp-breeze-cache-clear",
+  "version": "2.0.0",
+  "description": "Clear the Breeze cache folder on every WordPress site on a Cloudways server in one command.",
+  "main": "index.js",
+  "bin": {
+    "wp-breeze-cache-clear": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dry-run": "node index.js --dry-run",
+    "test": "node --test"
+  },
+  "keywords": ["wordpress", "breeze", "cache", "cloudways", "automation"],
+  "author": "Jahid Khan Tuhin",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
