@@ -36,6 +36,12 @@ const onlySite = (args.find(a => a.startsWith('--site=')) || '').replace('--site
 /* helpers                                                             */
 /* ------------------------------------------------------------------ */
 
+// the useful line of WP-CLI's stderr: its "Error: ..." line, not the PHP notices printed before it
+function errorMessage(stderr, fallback) {
+    const lines = String(stderr || '').split('\n').map(line => line.trim()).filter(Boolean)
+    return lines.find(line => /^error:/i.test(line)) || lines[lines.length - 1] || fallback
+}
+
 /**
  * Runs a WP-CLI command inside a site directory and returns its output.
  * Warnings printed to stderr do not count as a failure, only a non-zero
@@ -47,7 +53,7 @@ const onlySite = (args.find(a => a.startsWith('--site=')) || '').replace('--site
 function runWp(args, cwd) {
     return new Promise((resolve, reject) => {
         execFile(wpBin, args, { cwd, timeout: WP_TIMEOUT_MS, maxBuffer: 50 * 1024 * 1024 }, (error, stdout, stderr) => {
-            if (error) return reject(new Error((stderr || error.message).trim()))
+            if (error) return reject(new Error(errorMessage(stderr, error.message)))
             resolve(stdout)
         })
     })
