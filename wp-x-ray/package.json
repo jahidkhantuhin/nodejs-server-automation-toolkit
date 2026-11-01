@@ -1,0 +1,16 @@
+{
+  "name": "wp-x-ray",
+  "version": "1.0.0",
+  "description": "Lists every WordPress site on a Cloudways server with its active theme and active plugins, as a CSV report.",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "theme": "node index.js --theme",
+    "plugins": "node index.js --plugins"
+  }
+}
