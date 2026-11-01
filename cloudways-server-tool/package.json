@@ -1,0 +1,19 @@
+{
+  "name": "cloudways-server-tool",
+  "version": "1.1.0",
+  "description": "Generates a list of Cloudways servers and performs multiple maintenance operations on demand",
+  "main": "index.js",
+  "author": "Jahid Khan Tuhin",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "server-list": "node serverList.js"
+  },
+  "dependencies": {
+    "got": "^12.0.1"
+  }
+}

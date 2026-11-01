@@ -1,0 +1,1 @@
+console.log("The index.js file does not contain any scripts. Please run the specific files within this folder.")
