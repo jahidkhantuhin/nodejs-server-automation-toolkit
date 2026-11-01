@@ -1,0 +1,19 @@
+{
+  "name": "cloudways-site-tool",
+  "version": "1.1.0",
+  "description": "A CLI tool that gets the WordPress version, plugin and theme list of all the sites on a Cloudways server and sends it to the designated webhooks.",
+  "main": "index.js",
+  "author": "Jahid Khan Tuhin",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dry-run": "node index.js --dry-run"
+  },
+  "dependencies": {
+    "got": "^11.8.3"
+  }
+}
