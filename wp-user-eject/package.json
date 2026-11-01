@@ -1,0 +1,16 @@
+{
+  "name": "wp-user-eject",
+  "version": "1.0.0",
+  "description": "Removes user(s) from all WordPress sites on a Cloudways server and reassigns their content. Requires WP-CLI.",
+  "main": "index.js",
+  "author": "Jahid Khan Tuhin",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "dry-run": "node index.js",
+    "apply": "node index.js --apply"
+  }
+}
