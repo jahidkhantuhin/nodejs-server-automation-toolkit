@@ -1,0 +1,20 @@
+{
+  "name": "wp-mailshift",
+  "version": "2.0.0",
+  "description": "Update the admin email of every WordPress site on a Cloudways server in one command. Requires WP-CLI.",
+  "main": "index.js",
+  "bin": {
+    "wp-mailshift": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dry-run": "node index.js --dry-run",
+    "test": "node --test"
+  },
+  "keywords": ["wordpress", "wp-cli", "cloudways", "automation", "admin-email"],
+  "author": "Jahid Khan Tuhin",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.3.0"
+  }
+}
