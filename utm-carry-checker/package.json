@@ -1,0 +1,17 @@
+{
+  "name": "utm-carry-checker",
+  "version": "1.1.0",
+  "description": "Checks whether the utms-carry-js script is working across a list of websites",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "got": "^11.8.6"
+  }
+}
